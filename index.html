@@ -7,6 +7,11 @@
       <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
       <link rel="manifest" href="images/site.webmanifest">
 
+      <!-- The <link> tag must always be in the head as it only works when it's in the head.
+      So when using an external CSS file you must insert it with the link tag and put it in the <head> element -->
+
+      <!-- insert it using "link:css" then press tab and vs code will populate the tag to have everything the tag need -->
+
       <style>
         table#tb1, table#tb1 th, table#tb1 td {
           border: 1px solid black;
@@ -35,6 +40,13 @@
       <img src="images/android-chrome-512x512.png" alt="Beautiful Dragon fly" style="width:150px; height: 150px;">
 
       <p style="color:violet">Now I'm testing out my styling.</p>
+
+      <!-- 
+      When using the stle tag, it is put in the <head> elememt because HTML is loaded from top to bottom and so in a case where you have a large document, the style will be loaded even before the rest of the page is loaded
+        
+      Whereas, if the style tag where to be inserted in the body of the code, some content will tenmd to load before the style in the casee of a large page.
+    
+      -->
 
       <p>Lets add a clickable button to this page, click on the button below for a surprise.</p>
       <button onclick="document.location='https://www.google.com'">Get surprise</button>
@@ -78,7 +90,7 @@
       <table id="tb2" style="width:60%">
         <thead>
           <tr>
-            <th>S/N</th>
+            <th style="width:5%">S/N</th>
             <th>Name</th>
             <th>Age</th>
             <th>Score</th>
@@ -115,10 +127,14 @@
       <p>One last table border style before we rest, for now.</p>
 
       <table id="tb3" style="width:50%">
+        <caption>Basic data colection</caption>
+        <tr>
+          <th colspan="2">Official Full Name</th>
+          <th rowspan="2">Place of Birth</th>
+        </tr>
         <tr>
           <th>First Name</th>
           <th>Last Name</th>
-          <th>Place of Birth</th>
         </tr>
         <tr>
           <td>John</td>
