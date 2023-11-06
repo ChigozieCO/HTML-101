@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="manifest" href="../assets/images/site.webmanifest">
+</head>
+<body>
+
+  <section>
+  <a href="../">Home</a>&emsp;
+  <a href="./">Signup</a>&emsp;
+  <a href="../practice/">Practice</a>&emsp;
+  </section>
+
+  <p>So now I test out several different form types.</p>
+
+  <h1>Text Form</h1>
+
+  <form autocomplete="on">
+    <label for="fname">Firstname:</label>
+    <input type="text" id="fname" name="Firstname" placeholder="Enter first name" required />
+    <label for="lname">Lastname:</label>
+    <input type="text" id="lname" name="Lastname" placeholder="Enter last name" required /><br />
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" placeholder="Select gender" required>
+      <option>Female</option>
+      <option>Male</option>
+      <option>Non Binary</option>
+      <option>Prefer not to say</option>
+    </select><br />
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="Email" placeholder="Enter Email" size="52"><br>
+    <label for="pwd">Password</label>
+    <input type="password" id="pwd" name="Password" placeholder="Enter Password" /><br />
+    <input type="submit" value="Signup" />
+    <input type="reset" value="Reset that, boo" />
+  </form>
+
+  <p>Trying something else</p>
+  <form>
+    <label for="gender">Gender:</label>
+    <!-- To ensure this type of form works as intended make sure the datalist id is unique and the same as the input list
+    Onl these two should have this value. -->
+    <input list="gender-list" name="gender" placeholder="Select gender" />
+    <datalist id="gender-list">
+      <option value="Female"></option>
+      <option value="Male"></option>
+      <option value="Non Binary"></option>
+      <option value="Agender"></option>
+      <option value="I prefer not to say"></option>
+    </datalist>
+    <input type="submit" value="Submit" />
+  </form>
+
+  <h1>Select your favourite programming language</h1>
+
+  <form> 
+    <input type="radio" id="HTML" name="fav_language" />
+    <label for="HTML">HTML</label><br />
+    <input type="radio" id="CSS" name="fav_language" />
+    <label for="CSS">CSS</label><br />
+    <input type="radio" id="Typescript" name="fav_language" />
+    <label for="Typescript">TYPESCRIPT</label><br />
+    <input type="submit" value="I love coding" />
+  </form>
+
+  <h1>Time for multiple choice my loves</h1>
+
+  <form>
+    <p>Select things that are true about you.</p>
+    <input type="checkbox" id="swim" name="hobbies" />
+    <label for="swim">I have swarm over 5 laps in the middle of the night.</label><br />
+    <input type="checkbox" id="sleep" name="hobbies" />
+    <label for="sleep">Once upon a time I slept for over 18 hours.</label><br />
+    <input type="checkbox" id="dress" name="hobbies" />
+    <label for="dress">I love to cross dress and one day I will join the drag show.</label><br />
+    <input type="checkbox" id="dance" name="hobbies" />
+    <label for="dance">I can't dance to save my soul, I practically have two left feet.</label><br />
+    <input type="checkbox" id="snore" name="hobbies" />
+    <label for="snore">Please don't snore close to me, get that comdition checked. I can't deal</label><br />
+    <p></p>
+    <input type="submit" value="Now I guess you can say you know some things about me" />
+  </form>
+
+  <h1>Another form type</h1>
+
+  <form>
+    <textarea name="message" rows="15" cols="60">
+      Share an experience that has shaped your career choice
+    </textarea><br />
+    <input type="submit" value="Share with us" />
+  </form>
+
+  <h1>Look who's here again</h1>
+
+  <form>
+    <fieldset>
+      <legend>Personal Details</legend>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname" placeholder="Enter first name"><br />
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" placeholder="Enter last name"><br />
+      <label for="birthday">Date of Birth:</label>
+      <input type="date" id="birthday" name="Birthday" placeholder="Pick date of birth" max="2005-01-01" min="1973-01-01"><br />
+      <label for="favcolour">Pick your favourite colour:</label>
+      <input type="color" id="favcolour" name="favcolour" placeholder="Pick color"><br />
+      <input type="submit" value="Submit Creds" />
+    </fieldset>
+  </form>
+</body>
+</html>
