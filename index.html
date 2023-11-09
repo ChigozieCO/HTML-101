@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
@@ -37,7 +37,7 @@
     <body>
       <h1>This is the beginning of beautiful things</h1>
 
-      <section>
+      <nav>
       <a href="./practice.html">Practice page</a>&emsp;
 
       <a href="signup/">Signup</a>&emsp;
@@ -47,13 +47,19 @@
 
       <!-- Adding a value to the download attribute like this will download the image with the value specified, logo.png in this case. -->
       <a href="./images/android-chrome-192x192.png" download="logo.png">New</a>&emsp;
-      </section>
+
+      <!-- The below example wont work as The download attribute only works for same-originl URLs. So if the href is not the same origin as the site, it won't work. 
+      
+      In other words, you can only download files that belongs to that website. This attribute follows the same rules outline in the same-origin policy. -->
+       
+      <a href="https://cdn.britannica.com/84/73184-004-1B889310/Sunflower-field-Fargo-North-Dakota.jpg?c=crop&h=80&w=129" download="Flower">Check it out</a>
+      </nav>
 
       <h2>Now let's try coding forms</h2>
 
       <img src="assets/images/android-chrome-512x512.png" alt="Beautiful Dragon fly" style="width:150px; height: 150px;" />
 
-      <p style="color:violet">Now I'm testing out my styling.</p>
+      <p style="color:blue">Now I'm testing out my styling.</p>
 
       <!-- 
       When using the stle tag, it is put in the <head> elememt because HTML is loaded from top to bottom and so in a case where you have a large document, the style will be loaded even before the rest of the page is loaded
@@ -67,36 +73,40 @@
       <p>Just to space this</p>
 
       <table id="tb1" style="width: 50%">
-        <tr>
-          <th>Name</th>
-          <th>Animal</th>
-          <th>Place</th>
-          <th>Thing</th>
-        </tr>
-        <tr>
-          <td>Abigirl</td>
-          <td>Antelope</td>
-          <td>Angola</td>
-          <td>Antenna</td>
-        </tr>
-        <tr>
-          <td>Benson</td>
-          <td>Bat</td>
-          <td>Brazil</td>
-          <td>Bat</td>
-        </tr>
-        <tr>
-          <td>Catalina</td>
-          <td>Cow</td>
-          <td>Congo</td>
-          <td>Cup</td>
-        </tr>
-        <tr>
-          <td>Doris</td>
-          <td>Dolphin</td>
-          <td>Dakar</td>
-          <td>Dustbin</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Animal</th>
+            <th>Place</th>
+            <th>Thing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Abigirl</td>
+            <td>Antelope</td>
+            <td>Angola</td>
+            <td>Antenna</td>
+          </tr>
+          <tr>
+            <td>Benson</td>
+            <td>Bat</td>
+            <td>Brazil</td>
+            <td>Bat</td>
+          </tr>
+          <tr>
+            <td>Catalina</td>
+            <td>Cow</td>
+            <td>Congo</td>
+            <td>Cup</td>
+          </tr>
+          <tr>
+            <td>Doris</td>
+            <td>Dolphin</td>
+            <td>Dakar</td>
+            <td>Dustbin</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>Let's play with table having different types and colours of borders</p>
